@@ -74,7 +74,7 @@ I use a pair of serial <-> Ethernet converters, one being on the local side and 
 As I also use a logging or contest software that must also take control over the radio, I use a virtual comport driver to share 2 (or more) virtual ports that are redirecting all commands to the real COM port hooked on the interface.<br />
 I use **com0com virtual port driver** to do that.<br/>
 <img src="https://user-images.githubusercontent.com/1655173/212717575-9c066f17-d594-4227-800a-ad413bfa5130.jpg" width="800">
-<br />[More about this on my home page.](https://www.egloff.eu/index.php?option=com_content&view=article&id=94&Itemid=969&lang=en)
+<br />[More about this on my home page.](https://www.egloff.eu/index.php?option=com_content&view=article&id=94&Itemid=969&lang=en){:target="_blank" rel="noopener"}
 
 FAQ
 ----
