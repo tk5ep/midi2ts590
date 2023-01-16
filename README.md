@@ -1,15 +1,16 @@
 # midi2ts590
 midi2ts590 is for **MIDI to TS590**<br />
-It is script written in Python to remote control a Kenwood TS590s radioamateur transceiver (but also other Kenwood transceivers) using a Hercules DJcontrol compact (other controllers may work too).
+It is a program written in Python to remote control a Kenwood TS590s radioamateur transceiver (probably other Kenwood transceivers as well) using a Hercules DJcontrol compact (other controllers may work too).
 
 In 2017, I installed a remote station on a hilltop and I was in need of a convenient way to control my TS590s radio from home. So I wrote this simple program to do that with the help of a DJ controller.<br />
-I chosed Python as programming longuage for the ease of use, and this is my first script written in Python.
+I chosed Python as programming language for the ease of use, and this is my first script written in Python.
 
 Requirements
 ----
-It needs the Pygame MIDI library as well as the PySerial to be installed.
+The program needs the **Pygame MIDI** as well as the **PySerial** libraries to be installed.
 
-:warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />As of the date of writing (jan. 2023) the latest Pygame library is only compatible with the Windows packaged Python version 3.10.9
+:warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />
+As of the date of writing (jan. 2023) the latest Pygame library is only compatible with the Windows packaged Python version 3.10.9
 
 For what is it good for ?
 ----
@@ -63,15 +64,15 @@ Here the default values :
     cmd3 =
     
 Apart the COM port and MIDI device numbers, these default parameters should work.<br />
-If a wrong COM port has been given, a list of found ports is displayed for corrections.<br />
-The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be set in the configuration file.<br/>
+If a wrong COM port has been given, a list of found ports is displayed as a guide for correction.<br />
+The script displays all MIDI devices found and both INPUT & OUTPUT device numbers have to be set in the configuration file.<br/>
 Errors in the configuration file, wrong settings or not found devices do stop the execution.
 
-For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull...<br />
-I use a pair of serial <-> Ethernet converters, one being on the local side and the other on the remote site.
+For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull...:smile:<br />
+I use a pair of serial <-> Ethernet converters, one being on the local side and the other on the remote site. An Internet link between both sites makes this transparent.
 
-As I also use a logging or contest software that must also take control over the radio, I use a virtual comport driver to share 2 (or more) virtual ports that redirect all commands to a real COM port.<br />
-I use com0com to do that.
+As I also use a logging or contest software that must also take control over the radio, I use a virtual comport driver to share 2 (or more) virtual ports that are redirecting all commands to the real COM port hooked on the interface.<br />
+I use **com0com virtual port driver** to do that.
 
 FAQ
 ----
