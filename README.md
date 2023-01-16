@@ -8,10 +8,10 @@ It needs the Pygame MIDI library as well as the PySerial to be installed.
 
 ### For what is it good for ? ###
 The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.<br />
-The goal of this script is to drive the TS590s via on of these ports, with the help of a DJcontrol compact MIDI controller.
+The goal of this script is to drive the TS590s via one of these ports with the help of a DJcontrol compact MIDI controller.
 
-The jogs, buttons, slider and potentiometers are used to control the frequency, modes, VFO, etc...
-e.g the left PITCH jog is used to control the VFO frequency, while the center slider controls the AF volume.
+The jogs, buttons, slider and potentiometers are used to control the frequency, modes, VFO, etc...<br />
+e.g the left PITCH jog is used to control the VFO frequency, the right jog sets the RIT, while the center slider controls the AF volume.
 
 So, the script transforms the MIDI commands to Kenwood remote commands and sends them to the radio via the COM port.
 
@@ -55,12 +55,13 @@ Here the default values :
     cmd3 =
     
 Apart the COM port number and MIDI device numbers, these default parameters should work.<br />
-If a wrong COM port has been given, a list of found ports is diplayed.<br />
-The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be given in the configuration file.
+If a wrong COM port has been given, a list of found ports is displayed for corrections.<br />
+The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be set in the configuration file.
 
-Errors in the configuration file, wrong settings or not found devices do stop the execution.
+Errors in the configuration file, wrong settings or not found devices do stop the execution.<br />
 ### References & links ###
 [My homepage](https://egloff.eu)<br />
 [Kenwood remote control reference guide](https://www.kenwood.com/i/products/info/amateur/pdf/ts590_g_pc_command_en_rev3.pdf)
 
 Have fun & let me know if you found any interest in this script.
+Any comment & improvement is welcome.
