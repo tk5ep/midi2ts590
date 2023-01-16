@@ -80,6 +80,7 @@ FAQ
 References & links
 ----
 [My homepage](https://egloff.eu)<br />
+[Hercules support page with all infos about the DJcontrol compact](https://support.hercules.com/en/product/djcontrolcompact-en/)<br />
 [Kenwood remote control reference guide](https://www.kenwood.com/i/products/info/amateur/pdf/ts590_g_pc_command_en_rev3.pdf)
 
 Have fun & let me know if you found any interest in this script.
