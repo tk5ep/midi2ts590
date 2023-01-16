@@ -58,5 +58,8 @@ Apart the COM port number and MIDI device numbers, these default parameters shou
 The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be given in the configuration file.
 
 Errors in the configuration file, wrong settings or not found devices do stop the execution.
+### References ###
+[My homepage](https://egloff.eu)<br />
+[Kenwood remote control reference guide](https://www.kenwood.com/i/products/info/amateur/pdf/ts590_g_pc_command_en_rev3.pdf)
 
 Have fun & let me know if you found any interest in this script.
