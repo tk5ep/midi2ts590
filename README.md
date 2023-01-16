@@ -4,23 +4,23 @@ A Python 3 script to remote control a TS590 (but also other Kenwood transceivers
 ### Requirements ###
 It needs the Pygame MIDI library as well as the PySerial to be installed.
 
-:warning: BEWARE that the above libraries are compatible with your Python 3 version ! As of the date of wrting (jan.2023) the last compatible Windows packaged Python version is 3.10.9
+:warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />As of the date of writing (jan.2023) the last compatible Windows packaged Python version is 3.10.9
 
 ### For what is it good for ? ###
-The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.
+The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.<br />
 The goal of this script is to drive the TS590s via on of these ports, with the help of a DJcontrol compact MIDI controller.
 
 The jogs, buttons, slider and potentiometers are used to control the frequency, modes, VFO, etc...
 e.g the left PITCH jog is used to control the VFO frequency, while the center slider controls the AF volume.
 
-The script transforms the MIDI commands to Kenwood remote commands.
+So, the script transforms the MIDI commands to Kenwood remote commands and sends them to the radio via the COM port.
 
 Here is the reassignment view of the controller.
 ![DJcontrol_TS590](https://user-images.githubusercontent.com/1655173/212649541-284efeca-9e17-44fd-b9a6-b3fc8dd16bab.JPG)
 
 ### Usage ###
-At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.
-If the file doesn't exist in the current folder, it is create with default parameters that have to be adapted for the indentend use.![warning-icon](https://user-images.githubusercontent.com/1655173/212655126-f5725311-7f40-40d5-ab9d-14058675cd26.png)
+At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.  
+:warning:If the file doesn't exist in the current folder, it is create with default parameters that have to be adapted for the indentend use !
 
 Here the default values :
 
@@ -54,7 +54,7 @@ Here the default values :
     cmd2 = 
     cmd3 =
     
-Apart the COM port number and MIDI device numbers, these default parameters should work.
+Apart the COM port number and MIDI device numbers, these default parameters should work.<br />
 The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be given in the configuration file.
 
 Errors in the configuration file, wrong settings or not found devices do stop the execution.
