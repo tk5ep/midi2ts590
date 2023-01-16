@@ -1,12 +1,14 @@
 # midi2ts590
 A Python 3 script to remote control a TS590 (but also other Kenwood transceivers) using a Hercules DJcontrol compact (other controllers may work too).
 
-### Requirements ###
+Requirements
+----
 It needs the Pygame MIDI library as well as the PySerial to be installed.
 
 :warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />As of the date of writing (jan.2023) the latest Pygame library is only compatible with Python version is 3.10.9
 
-### For what is it good for ? ###
+For what is it good for ?
+----
 The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.<br />
 The goal of this script is to drive the TS590s via one of these ports with the help of a DJcontrol compact MIDI controller.
 
@@ -18,8 +20,9 @@ So, the script transforms the MIDI commands to Kenwood remote commands and sends
 Here is the reassignment view of the controller.
 ![DJcontrol_TS590](https://user-images.githubusercontent.com/1655173/212649541-284efeca-9e17-44fd-b9a6-b3fc8dd16bab.JPG)
 
-### Usage ###
-At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.  
+ Usage
+ ----
+ At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.  
 :warning:If the file doesn't exist in the current folder, it is created with default parameters that have to be adapted for the indentend use !
 
 Here the default values :
@@ -56,10 +59,15 @@ Here the default values :
     
 Apart the COM port number and MIDI device numbers, these default parameters should work.<br />
 If a wrong COM port has been given, a list of found ports is displayed for corrections.<br />
-The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be set in the configuration file.
+The script displays all MIDI devices found and both INPUT and OUTPUT devices number have to be set in the configuration file.<br/>
+Errors in the configuration file, wrong settings or not found devices do stop the execution.
 
-Errors in the configuration file, wrong settings or not found devices do stop the execution.<br />
-### References & links ###
+FAQ
+----
+
+
+References & links
+----
 [My homepage](https://egloff.eu)<br />
 [Kenwood remote control reference guide](https://www.kenwood.com/i/products/info/amateur/pdf/ts590_g_pc_command_en_rev3.pdf)
 
