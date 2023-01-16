@@ -2,7 +2,9 @@
 A Python 3 script to remote control a TS590 (but also other Kenwood transceivers) using a Hercules DJcontrol compact (other controllers may work too).
 
 It needs the Pygame MIDI library as well as the PySerial to be installed.
-BEWARE that the above libraries are compatible with your Python 3 version !
+
+![warning-icon](https://user-images.githubusercontent.com/1655173/212655165-96c3ce3d-bde2-490f-a564-be5ad02a3db7.png)
+BEWARE that the above libraries are compatible with your Python 3 version ! As of the date of wrting (jan.2023) the last compatible Windows packaged Python version is 3.10.9
 
 The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.
 The goal of this script is to drive the TS590s via on of these ports, with the help of a DJcontrol compact MIDI controller.
@@ -16,7 +18,8 @@ Here is the reassignment view of the controller.
 ![DJcontrol_TS590](https://user-images.githubusercontent.com/1655173/212649541-284efeca-9e17-44fd-b9a6-b3fc8dd16bab.JPG)
 
 At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.
-If the file doesn't exist in the current folder, it is create with default parameters that have to be adapted for the indentend use.
+If the file doesn't exist in the current folder, it is create with default parameters that have to be adapted for the indentend use.![warning-icon](https://user-images.githubusercontent.com/1655173/212655126-f5725311-7f40-40d5-ab9d-14058675cd26.png)
+
 Here the default values :
 
     [Default]
