@@ -1,5 +1,6 @@
 # midi2ts590
-A Python 3 script to remote control a TS590 (but also other Kenwood transceivers) using a Hercules DJcontrol compact (other controllers may work too).
+midi2ts590 is for **MIDI to TS590**<br />
+It is script written in Python to remote control a Kenwood TS590s radioamateur transceiver (but also other Kenwood transceivers) using a Hercules DJcontrol compact (other controllers may work too).
 
 Requirements
 ----
@@ -9,11 +10,11 @@ It needs the Pygame MIDI library as well as the PySerial to be installed.
 
 For what is it good for ?
 ----
-The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.<br />
-The goal of this script is to drive the TS590s via one of these ports with the help of a DJcontrol compact MIDI controller.
+The TS590s has a set of remote commands that allows to control it, either via the COM port or the USB port.<br />
+The goal of this script is to remote control the TS590s via one of these ports with the help of a DJcontrol compact MIDI controller. This DJ controller has 2 big jogs, a set of pushbuttons, a slider potentiometer and 6 rotary potentioneter.
 
-The jogs, buttons, slider and potentiometers are used to control the frequency, modes, VFO, etc...<br />
-e.g the left PITCH jog is used to control the VFO frequency, the right jog sets the RIT, while the center slider controls the AF volume.
+All these controls are used to change the frequency, modes, VFO, etc...<br />
+e.g the left PITCH jog is used to control the VFO frequency, the right jog changes the RIT offset, while the center slider controls the AF volume, etc..
 
 So, the script transforms the MIDI commands to Kenwood remote commands and sends them to the radio via the COM port.
 
