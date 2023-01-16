@@ -78,6 +78,7 @@ FAQ
 ----
 **Is the Windows driver for the DJcontrol needed ?**<br />
 No, it works as a standalone.
+
 **Are other transceivers or DJ controller usable ?**<br />
 Yes probably. Kenwood shares a large set between all models.<br />
 The MIDI commands are quite standard, and adapting the codes in the software is possible.
