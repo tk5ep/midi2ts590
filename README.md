@@ -4,7 +4,7 @@ A Python 3 script to remote control a TS590 (but also other Kenwood transceivers
 ### Requirements ###
 It needs the Pygame MIDI library as well as the PySerial to be installed.
 
-:warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />As of the date of writing (jan.2023) the last compatible Windows packaged Python version is 3.10.9
+:warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />As of the date of writing (jan.2023) the latest Pygame library is only compatible with Python version is 3.10.9
 
 ### For what is it good for ? ###
 The TS590s has a set of remote command that allows to control it, either via the COM port or the USB port.<br />
