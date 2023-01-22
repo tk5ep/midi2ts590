@@ -28,6 +28,15 @@ Here is the reassignment view of the controller controls.<br />
 
  Usage
  ----
+        
+    midi2ts590.py [-h] [-m] [-c] [-v]
+
+    options:
+      -h, --help      show this help message and exit
+      -m, --midi      show available MIDI dervices
+      -c, --comports  show COM ports
+      -v, --verbose   increase output verbosity
+  
  There is NO need to load the driver for the used controller, it works as a standalone.<br />
  At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.  
 :warning:If the file doesn't exist in the current folder, it is created with default parameters that have to be adapted for the indentend use !
@@ -39,6 +48,8 @@ Here the default values :
     # defaults values created by program
     mode = USB
     vfo = A
+    tuningstep = 5
+    radiopoll = 1
 
     [Midi]
     devicein = 1
@@ -46,7 +57,7 @@ Here the default values :
 
     [Radio]
     model = TS590s
-    comport = COM33
+    comport = COM9
     speed = 57600
     bits = 8
     stop = 1
@@ -54,22 +65,25 @@ Here the default values :
     xonxoff = 0
     rtscts = 0
     dsrdtr = 0
+    polltime = 1000
+    rxtimeout = 100
+    txtimeout = 100
 
     [Commands]
     # put one or more kenwood commands (see manual) on each following line
     # e.g cmd1 = vv;vx0;         set vfo a=b and vox off
     # e.g cmd2 = rt0;            will put rit off
     # these commands will be sent at startup
-    cmd1 = 
+    cmd1 = VV
     cmd2 = 
-    cmd3 =
-    
+    cmd3 = 
+
 Apart the COM port and MIDI device numbers, these default parameters should work.<br />
 If a wrong COM port has been given, a list of found ports is displayed as a guide for correction.<br />
 The script displays all MIDI devices found and both INPUT & OUTPUT device numbers have to be set in the configuration file.<br/>
 Errors in the configuration file, wrong settings or not found devices do stop the execution.
 
-For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull...:smile:<br />
+For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull, as the taget purpose is remote. :smile:<br />
 I use a pair of serial <-> Ethernet converters, one being on the local side and the other on the remote site. An Internet link between both sites makes this transparent.
 
 As I also use a logging or contest software that must also take control over the radio, I use a virtual comport driver to share 2 (or more) virtual ports that are redirecting all commands to the real COM port hooked on the interface.<br />
