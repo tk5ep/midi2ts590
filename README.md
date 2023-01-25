@@ -87,6 +87,25 @@ Errors in the configuration file, wrong settings or not found devices do stop th
 
 Some options need a bit more explanations:
 
+    [Midi]
+     devicein = 1
+     deviceout = 3
+     
+These are MIDI device number of the DJcontroller. If you don't know what devices you have hooked on your computer, you can start the software with the -m or --midi option to show the devices found.<br />
+List of all available MIDI devices, like this :
+    
+    nr: 0  Interface: MMSystem   Name: Microsoft MIDI Mapper            output   Opened:0
+    nr: 1  Interface: MMSystem   Name: DJControl Compact                input    Opened:0
+    nr: 2  Interface: MMSystem   Name: Microsoft GS Wavetable Synth     output   Opened:0
+    nr: 3  Interface: MMSystem   Name: DJControl Compact                output   Opened:0
+
+Set the right device in the configuration file.
+
+     tuningstep = 5
+ 
+The VFO command is made via the left JOG button. Each increment in turning this button sends a increment command to the VFO of the radio.<br />
+This can be a bit annoying as there is some latency due to the communication time between the software and the radio. To reduce this, each step on the tuning button can send more than one step. 5 seems to be quite adapted, but this can be adapted to everyone's need.
+
      radiopoll = 0
      radiosniff = 0
      
