@@ -12,6 +12,8 @@ The program needs the **Pygame MIDI** as well as the **PySerial** libraries to b
 :warning: BEWARE that the above libraries are compatible with your Python 3 version !<br />
 As of the date of writing (jan. 2023) the latest Pygame library is only compatible with the Windows packaged Python version 3.10.9
 
+I have tested this script only on a **Windows 10** machine.
+
 For what is it good for ?
 ----
 The TS590s has a set of remote commands that allows to control it, either via the COM port or the USB port.<br />
@@ -37,7 +39,7 @@ Here is the reassignment view of the controller controls.<br />
       -c, --comports  show COM ports
       -v, --verbose   increase output verbosity
   
- There is NO need to load the driver for the used controller, it works as a standalone.<br />
+ There is NO need to load the Hercules driver for the used controller, it works as a standalone.<br />
  At startup, the script reads a configuration file "midi2ts590.ini" where the needed settings are given.  
 :warning:If the file doesn't exist in the current folder, it is created with default parameters that have to be adapted for the indentend use !
 
