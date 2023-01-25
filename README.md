@@ -93,7 +93,7 @@ Some options need a bit more explanations:
      devicein = 1
      deviceout = 3
      
-These are MIDI device number of the DJcontroller. If you don't know what devices you have hooked on your computer, you can start the software with the -m or --midi option to show the devices found.<br />
+These are MIDI device numbers of the DJcontroller. If you don't know what devices you have hooked on your computer, you can start the software with the -m or --midi option to show the devices found.<br />
 List of all available MIDI devices, like this :
     
     nr: 0  Interface: MMSystem   Name: Microsoft MIDI Mapper            output   Opened:0
@@ -101,7 +101,7 @@ List of all available MIDI devices, like this :
     nr: 2  Interface: MMSystem   Name: Microsoft GS Wavetable Synth     output   Opened:0
     nr: 3  Interface: MMSystem   Name: DJControl Compact                output   Opened:0
 
-Set the right device in the configuration file.
+Set the right devices in the configuration file.
 
      tuningstep = 5
  
@@ -112,15 +112,17 @@ This can be a bit annoying as there is some latency due to the communication tim
      radiosniff = 0
      
 The settings made via the DJ controller are transmitted to the radio, and they are normaly "in phase".<br />
-e.g The oparating mode and VFO should be reported with the corresponding lights under the buttons.<br />
+e.g The operating mode and VFO should be reported with the corresponding lights under the buttons.<br />
 But when a modification is made on the radio itself with the help of the radio keyboard OR via a logging software that is also hooked on the radio, there can be some differences. Radio and controller are "out of phase".
 This is for what the 2 above options are good for.
 
 With **radiopoll ON**, the software is polling the radio and sending an "IF" command, waits for an answer and sets the controller to be in phase. This option presumes that there is no other software used.<br />
 With **radiosniff ON**, the software is polling the radio but doesn't send any command, it only "listens" what is on the COM port and detects the IF answer from the radio to the other logging software and modifies the LEDs state.<br />
-**ONLY ONE** of these option should be active, to avoid heavy traffic and collisions on the COM port.
+**ONLY ONE** of these option should be active, to avoid heavy traffic and collisions on the COM port.<br />
+The polling time is set by default at 1 second, but can be modified with the **polltime** option, in ms.
 
-For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull, as the target purpose is remote. :smile:<br />
+For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. This can avoid some headaches with virtual ports, splitters, etc...<br />
+But this isn't very usefull, as the target purpose is remote. :smile:<br />
 I use a pair of serial <-> Ethernet converters, one being on the local side and the other on the remote site. An Internet link between both sites makes this transparent.
 
 As I also use a logging or contest software that must also take control over the radio, I use a virtual comport driver to share 2 (or more) virtual ports that are redirecting all commands to the real COM port hooked on the interface.<br />
