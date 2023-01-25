@@ -43,47 +43,63 @@ Here is the reassignment view of the controller controls.<br />
 
 Here the default values :
 
-    [Default]
-    # midi2ts590 config file
-    # defaults values created by program
-    mode = USB
-    vfo = A
-    tuningstep = 5
-    radiopoll = 1
+     [Default]
+     # midi2ts590 config file
+     # defaults values created by program
+     # see manual for help in setting
+     mode = USB
+     vfo = A
+     tuningstep = 5
+     radiopoll = 0
+     radiosniff = 1
 
-    [Midi]
-    devicein = 1
-    deviceout = 3
+     [Midi]
+     devicein = 1
+     deviceout = 3
 
-    [Radio]
-    model = TS590s
-    comport = COM9
-    speed = 57600
-    bits = 8
-    stop = 1
-    parity = N
-    xonxoff = 0
-    rtscts = 0
-    dsrdtr = 0
-    polltime = 1000
-    rxtimeout = 100
-    txtimeout = 100
+     [Radio]
+     model = TS590s
+     comport = COM8
+     baudrate = 57600
+     bytesize = 8
+     stopbits = 1
+     parity = N
+     xonxoff = 0
+     rtscts = 0
+     dsrdtr = 0
+     polltime = 1000
+     rxtimeout = 100
+     txtimeout = 100
 
-    [Commands]
-    # put one or more kenwood commands (see manual) on each following line
-    # e.g cmd1 = vv;vx0;         set vfo a=b and vox off
-    # e.g cmd2 = rt0;            will put rit off
-    # these commands will be sent at startup
-    cmd1 = VV
-    cmd2 = 
-    cmd3 = 
+     [Commands]
+     # put one or more kenwood commands (see manual) on each following line
+     # e.g cmd1 = vv;vx0;         set vfo a=b and vox off
+     # e.g cmd2 = rt0;            will put rit off
+     # these commands will be sent at startup
+     cmd1 = VV
+     cmd2 = 
+     cmd3 = 
 
 Apart the COM port and MIDI device numbers, these default parameters should work.<br />
 If a wrong COM port has been given, a list of found ports is displayed as a guide for correction.<br />
 The script displays all MIDI devices found and both INPUT & OUTPUT device numbers have to be set in the configuration file.<br/>
 Errors in the configuration file, wrong settings or not found devices do stop the execution.
 
-For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull, as the taget purpose is remote. :smile:<br />
+Some options need a bit more explanations:
+
+     radiopoll = 0
+     radiosniff = 0
+     
+The settings made via the DJ controller are transmitted to the radio, and they are normaly "in phase".<br />
+e.g The oparating mode and VFO should be reported with the corresponding lights under the buttons.<br />
+But when a modification is made on the radio itself with the help of the radio keyboard OR via a logging software that is also hooked on the radio, there can be some differences. Radio and controller are "out of phase".
+This is for what the 2 above options are good for.
+
+With **radiopoll ON**, the software is polling the radio and sending an "IF" command, waits for an answer and sets the controller to be in phase. This option presumes that there is no other software used.<br />
+With **radiosniff ON**, the software is polling the radio but doesn't send any command, it only "listens" what is on the COM port and detects the IF answer from the radio to the other logging software and modifies the LEDs state.<br />
+**ONLY ONE** of these option should be active, to avoid heavy traffic and collisions on the COM port.
+
+For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. But this is really not very usefull, as the target purpose is remote. :smile:<br />
 I use a pair of serial <-> Ethernet converters, one being on the local side and the other on the remote site. An Internet link between both sites makes this transparent.
 
 As I also use a logging or contest software that must also take control over the radio, I use a virtual comport driver to share 2 (or more) virtual ports that are redirecting all commands to the real COM port hooked on the interface.<br />
