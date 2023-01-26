@@ -52,7 +52,6 @@ Here the default values :
      mode = USB
      vfo = A
      tuningstep = 5
-     radiopoll = 0
      radiosniff = 1
 
      [Midi]
@@ -108,17 +107,16 @@ Set the right devices in the configuration file.
 The VFO command is made via the left JOG button. Each increment in turning this button sends a increment command to the VFO of the radio.<br />
 This can be a bit annoying as there is some latency due to the communication time between the software and the radio. To reduce this, each step on the tuning button can send more than one step. 5 seems to be quite adapted, but this can be adapted to everyone's need.
 
-     radiopoll = 0
      radiosniff = 0
      
 The settings made via the DJ controller are transmitted to the radio, and they are normaly "in phase".<br />
 e.g The operating mode and VFO should be reported with the corresponding lights under the buttons.<br />
 But when a modification is made on the radio itself with the help of the radio keyboard OR via a logging software that is also hooked on the radio, there can be some differences. Radio and controller are "out of phase".
-This is for what the 2 above options are good for.
+This is for what the above option is good for.
 
-With **radiopoll ON**, the software is polling the radio and sending an "IF" command, waits for an answer and sets the controller to be in phase. This option presumes that there is no other software used.<br />
-With **radiosniff ON**, the software is polling the radio but doesn't send any command, it only "listens" what is on the COM port and detects the IF answer from the radio to the other logging software and modifies the LEDs state.<br />
-**ONLY ONE** of these option should be active, to avoid heavy traffic and collisions on the COM port.<br />
+With **radiosniff = 1**, the software is polling the radio and sending an "IF" command, waits for an answer and sets the controller to be in phase. This option presumes that there is no other software used.<br />
+With **radiosniff = 2**, the software is polling the radio but doesn't send any command, it only "listens" what is on the COM port and detects the IF answer from the radio to the other logging software and modifies the LEDs state.<br />
+**Radiosniff = 0** there is no sniffing at all.<br />
 The polling time is set by default at 1 second, but can be modified with the **polltime** option, in ms.
 
 For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. This can avoid some headaches with virtual ports, splitters, etc...<br />
