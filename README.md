@@ -117,7 +117,7 @@ But when a modification is made on the radio itself with the help of the radio k
 This is for what the above option is good for.
 
 With **radiosniff = 1**, the software is polling the radio and sending an "IF" command, waits for an answer and sets the controller to be in phase. This option presumes that there is no other software used.<br />
-With **radiosniff = 2**, the software is polling the radio but doesn't send any command, it only "listens" what is on the COM port and detects the IF answer from the radio to the other logging software and modifies the LEDs state.<br />
+With **radiosniff = 2**, the software is sniffing the COM port and detects if the IF answer from the radio to a logging software and adjusts the LEDs state. Use this if you use a logging software with CAT control.<br />
 **Radiosniff = 0** there is no sniffing at all.<br />
 The polling time is set by default at 1 second, but can be modified with the **polltime** option, in ms.
 
