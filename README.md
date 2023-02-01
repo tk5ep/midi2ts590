@@ -82,6 +82,8 @@ Here the default values :
      cmd3 = 
 
 Apart the COM port and MIDI device numbers, these default parameters should work.<br />
+Polltime, rxtimeout and txtimeout are in ms.
+
 If a wrong COM port has been given, a list of found ports is displayed as a guide for correction.<br />
 The script displays all MIDI devices found and both INPUT & OUTPUT device numbers have to be set in the configuration file.<br/>
 Errors in the configuration file, wrong settings or not found devices do stop the execution.
