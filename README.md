@@ -134,7 +134,7 @@ afvolume = 0-255
 
      cmd1 = VV
 cmd1,cmd2,cmd3 = Kenwood CAT commands to be sent at startup. See Kenwood remote control reference guide.<br />
-e.g VV sets VFOA = VFOB. AF1 sets preamplifier ON. Can be left blank.
+e.g VV sets VFOA = VFOB. PA1 sets preamplifier ON. Can be left blank.
 
 For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. This can avoid some headaches with virtual ports, splitters, etc...<br />
 But this isn't very usefull, as the target purpose is remote. :smile:<br />
