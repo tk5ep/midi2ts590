@@ -124,6 +124,18 @@ With **radiosniff = 2**, the software is sniffing the COM port and detects if th
 **Radiosniff = 0** there is no sniffing at all.<br />
 The polling time is set by default at 1 second, but can be modified with the **polltime** option, in ms.
 
+     mode = USB
+     VFO = A
+     afvolume = 0
+Default values at startup.<br />
+mode = USB, LSB, FSK, CW<br />
+VFO = A or B<br />
+afvolume = 0-255
+
+     cmd1 = VV
+cmd1,cmd2,cmd3 = Kenwood CAT commands to be sent at startup. See Kenwood remote control reference guide.<br />
+e.g VV sets VFOA = VFOB. AF1 sets preamplifier ON. Can be left blank.
+
 For the initial tests, the TS590s can be connected directly to a COM port on the computer that also has the DJ controller attached. This can avoid some headaches with virtual ports, splitters, etc...<br />
 But this isn't very usefull, as the target purpose is remote. :smile:<br />
 I use a pair of serial <-> Ethernet converters, one being on the local side and the other on the remote site. An Internet link between both sites makes this transparent.
