@@ -53,6 +53,7 @@ Here the default values :
      vfo = A
      tuningstep = 5
      radiosniff = 1
+     afvolume = 0
 
      [Midi]
      devicein = 1
@@ -68,9 +69,11 @@ Here the default values :
      xonxoff = 0
      rtscts = 0
      dsrdtr = 0
+     rts = 1
+     dsr = 1
      polltime = 1000
-     rxtimeout = 100
-     txtimeout = 100
+     rxtimeout = 0
+     txtimeout = 0
 
      [Commands]
      # put one or more kenwood commands (see manual) on each following line
