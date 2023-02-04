@@ -25,7 +25,7 @@ e.g the left PITCH jog is used to control the VFO frequency, the right jog chang
 So, the script transforms the MIDI commands to Kenwood remote commands and sends them to the radio via the COM port.
 
 Here is the reassignment view of the controller controls.<br />
-![djcontrol_v023](https://user-images.githubusercontent.com/1655173/213935193-bb5455d5-ebbd-464a-a17c-0e65fb5cda53.jpg)
+![djcontrol_mapping](https://github.com/tk5ep/midi2ts590/blob/main/djcontrol_mapping.jpg)
 
 
  Usage
